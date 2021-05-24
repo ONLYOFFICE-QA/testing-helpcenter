@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'active_support'
 require 'onlyoffice_webdriver_wrapper'
 require 'palladium'
 require_relative 'test_manger/test_manager'

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-gem 'activesupport'
 gem 'onlyoffice_tcm_helper'
 gem 'onlyoffice_testrail_wrapper'
 gem 'onlyoffice_webdriver_wrapper'
@@ -10,7 +9,6 @@ gem 'palladium'
 gem 'rspec'
 gem 'rspec_passed_time_formatter'
 gem 'rspec-retry'
-gem 'wrata_api'
 
 group :development do
   gem 'overcommit', require: false
