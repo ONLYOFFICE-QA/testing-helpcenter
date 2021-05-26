@@ -8,6 +8,11 @@ describe 'Help center search' do
     @help_center_home_page, @test = TestingHelpCentreOnlyoffice::HelpCenterHelper.new.open_help_center_main_page(config)
   end
 
+  after do |example|
+    test_manager.add_result(example, @test)
+    @test.webdriver.quit
+  end
+
   it 'Non-existing word return `No results matching your query could be found` and zero found results' do
     result_page = @help_center_home_page.search('Fakeword')
     expect(result_page.no_result_found_element).to be_present
@@ -19,10 +24,5 @@ describe 'Help center search' do
     result_page = @help_center_home_page.search(search_string)
     expect(result_page.search_result_count).to be > 0
     expect(result_page.search_results.first.snippet_text).to be_include(search_string)
-  end
-
-  after do |example|
-    test_manager.add_result(example, @test)
-    @test.webdriver.quit
   end
 end
