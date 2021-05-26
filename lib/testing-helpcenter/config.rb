@@ -16,6 +16,10 @@ module TestingHelpCentreOnlyoffice
       @browser = params.fetch(:browser, :chrome)
     end
 
+    def test_plan_name
+      "Help center domain: #{@server}, Version: #{Time.new.strftime('%d/%m/%Y')}"
+    end
+
     private
 
     # @return [String] server on which test are performed

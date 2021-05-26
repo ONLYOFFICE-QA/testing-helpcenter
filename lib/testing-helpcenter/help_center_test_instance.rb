@@ -16,7 +16,7 @@ module TestingHelpCentreOnlyoffice
 
     def initialize(config)
       @webdriver = WebDriver.new(config.browser, record_video: false)
-      @webdriver.open('https://test-helpcenter.onlyoffice.com/')
+      @webdriver.open(config.server)
     end
   end
 end
