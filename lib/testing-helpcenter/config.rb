@@ -17,7 +17,11 @@ module TestingHelpCentreOnlyoffice
     end
 
     def test_plan_name
-      "Help center domain: #{@server}, Version: #{Time.new.strftime('%d/%m/%Y')}"
+      "Help center domain: #{@server}, Version: #{version}"
+    end
+
+    def version
+      Time.new.strftime('%d/%m/%Y')
     end
 
     private
