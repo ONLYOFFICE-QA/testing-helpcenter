@@ -22,8 +22,8 @@ module TestingHelpCentreOnlyoffice
 
     def initialize(params = {})
       params[:suite_name] ||= File.basename(__FILE__)
-      params[:plan_name] ||= config.test_plan_name
-      params[:plan_name_testrail] ||= config.test_plan_name
+      params[:plan_name] ||= test_plan_name
+      params[:plan_name_testrail] ||= test_plan_name
       params[:product_name] ||= 'Help Center helpcenter.onlyoffice.com Autotests'
       @tcm_helper = OnlyofficeTcmHelper::TcmHelper.new(params)
       @palladium = init_palladium(params)
@@ -69,6 +69,10 @@ module TestingHelpCentreOnlyoffice
     # get code for colorize message in console
     def get_result_color(status_name)
       { failed: 45, pending: 43, passed: 42, passed_2: 46, aborted: 41, blocked: 44 }[status_name]
+    end
+
+    def test_plan_name
+      "Help center domain: #{config.server}, Version: #{config.version}"
     end
 
     private
