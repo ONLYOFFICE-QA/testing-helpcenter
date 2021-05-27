@@ -30,7 +30,7 @@ module TestingHelpCentreOnlyoffice
     end
 
     def default_language
-      return ENV['SPEC_LANGUAGE'] if HelpCenterData.site_languages.include?(ENV['SPEC_LANGUAGE'])
+      return ENV['SPEC_LANGUAGE'] if HelpCenterData.help_center_languages.include?(ENV['SPEC_LANGUAGE'])
 
       'en-US'
     end
