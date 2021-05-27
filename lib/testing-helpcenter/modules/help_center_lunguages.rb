@@ -8,7 +8,7 @@ module TestingHelpCentreOnlyoffice
     include PageObject
 
     div(:page_language, xpath: '(//div[@id="LanguageSelector"]/div[contains(@class, "title")])[1]')
-    list_item(:language_select, xpath: "//div[contains(@class, 'headerLengSelector')]//li[contains(@class, 'option')]")
+    elements(:language_select, xpath: "//li[contains(@class, 'option')]")
 
     def current_page_language
       @instance.webdriver.wait_until do
