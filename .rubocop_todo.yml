@@ -19,7 +19,7 @@ Metrics/MethodLength:
 # Offense count: 1
 Naming/AccessorMethodName:
   Exclude:
-    - 'lib/testing-helpcenter/modules/help_center_lunguages.rb'
+    - 'lib/testing-helpcenter/modules/help_center_languages.rb'
 
 # Offense count: 1
 # Configuration parameters: EnforcedStyle, CheckMethodNames, CheckSymbols, AllowedIdentifiers.

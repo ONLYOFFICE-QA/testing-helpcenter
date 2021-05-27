@@ -3,7 +3,7 @@
 require_relative 'help_center_helper'
 require_relative 'data/help_center_data'
 require_relative 'modules/cookie_window'
-require_relative 'modules/help_center_lunguages'
+require_relative 'modules/help_center_languages'
 require_relative 'search/help_center_search_result'
 require_relative 'site/site_sign_up'
 
