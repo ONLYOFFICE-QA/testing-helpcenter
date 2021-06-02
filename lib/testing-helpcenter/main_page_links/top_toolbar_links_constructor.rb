@@ -1,14 +1,19 @@
+# frozen_string_literal: true
+
 # Constructor for all links on main page for Installation Guides, Integration Guides, Administration Guides, User Guides, Developer Guides, Contribution Guides
 
 module TestingHelpCentreOnlyoffice
   class TopToolbarLinksConstructor
-
     include PageObject
 
     def initialize(instance, title)
       super(instance.webdriver.driver)
       @instance = instance
-      @title_xpath = "//div[@id='toggleMenuEditors']/ul/li/h2[contains(text(), '#{title}')]"
+      @title_xpath = if user_guides_for_mobile(title.to_s)
+                       "//div[contains(@class, 'MobileApps')]/h1[contains(text(), '#{title}')]"
+                     else
+                       "//div[@id='toggleMenuEditors']/ul/li/h2[contains(text(), '#{title}')]"
+                     end
       wait_to_load
     end
 
@@ -17,7 +22,11 @@ module TestingHelpCentreOnlyoffice
     end
 
     def title_element_present?
-      @instance.webdriver.driver.find_element(:xpath, @title_xpath).present?
+      @instance.webdriver.element_present?(@title_xpath)
+    end
+
+    def user_guides_for_mobile(title)
+      title.include?('iOS') || title.include?('Android')
     end
   end
 end
