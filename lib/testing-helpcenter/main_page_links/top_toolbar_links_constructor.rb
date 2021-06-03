@@ -9,7 +9,7 @@ module TestingHelpCentreOnlyoffice
     def initialize(instance, title)
       super(instance.webdriver.driver)
       @instance = instance
-      @title_xpath = if user_guides_for_mobile(title.to_s)
+      @title_xpath = if user_guides_for_mobile?(title.to_s)
                        "//div[contains(@class, 'MobileApps')]/h1[contains(text(), '#{title}')]"
                      else
                        "//div[@id='toggleMenuEditors']/ul/li/h2[contains(text(), '#{title}')]"
@@ -25,7 +25,7 @@ module TestingHelpCentreOnlyoffice
       @instance.webdriver.element_present?(@title_xpath)
     end
 
-    def user_guides_for_mobile(title)
+    def user_guides_for_mobile?(title)
       title.include?('iOS') || title.include?('Android')
     end
   end
