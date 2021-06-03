@@ -2,10 +2,14 @@
 
 require_relative 'help_center_helper'
 require_relative 'data/help_center_data'
+require_relative 'data/toolbar_info'
+require_relative 'main_page_links/help_center_contribution'
+require_relative 'main_page_links/top_toolbar_links_constructor'
 require_relative 'modules/cookie_window'
-require_relative 'modules/help_center_languages'
+require_relative 'modules/help_center_top_toolbar'
 require_relative 'search/help_center_search_result'
-require_relative 'site/site_sign_up'
+require_relative 'external_products/site_sign_up'
+require_relative 'external_products/api_main_page'
 
 module TestingHelpCentreOnlyoffice
   class HelpCenterHome
@@ -13,7 +17,7 @@ module TestingHelpCentreOnlyoffice
 
     include PageObject
     include CookieWindow
-    include HelpCenterLanguages
+    include HelpCenterTopToolbar
 
     text_field(:main_page_search, xpath: "//div[@class='search_line mainSearch']/input[@id='txtSearch']")
     element(:try_in_the_cloud, xpath: "//div[@class='content-header']//a[contains(@class, 'headerButton')]")
