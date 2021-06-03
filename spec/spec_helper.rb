@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../lib/testing_helpcenter'
+require_relative '../shared_examples/help_center_search'
 require 'onlyoffice_testrail_wrapper'
 require 'rspec'
 require 'rspec/retry'
