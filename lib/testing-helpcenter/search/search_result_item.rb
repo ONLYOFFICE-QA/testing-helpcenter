@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-# Single item in search result for help center
-# https://user-images.githubusercontent.com/40513035/118722660-4189b300-b7e1-11eb-9fa1-beae70816aad.png
-
 module TestingHelpCentreOnlyoffice
+  # Single item in search result for help center
+  # https://user-images.githubusercontent.com/40513035/118722660-4189b300-b7e1-11eb-9fa1-beae70816aad.png
   class HelpCenterResultItem
     def initialize(instance, index)
       @instance = instance

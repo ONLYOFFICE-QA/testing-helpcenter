@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-# https://api.onlyoffice.com/
-# https://user-images.githubusercontent.com/40513035/120454554-d85d8000-c348-11eb-8c78-9b5845d8de63.png
-
 module TestingHelpCentreOnlyoffice
+  # https://api.onlyoffice.com/
+  # https://user-images.githubusercontent.com/40513035/120454554-d85d8000-c348-11eb-8c78-9b5845d8de63.png
   class ApiMainPage
     include PageObject
 

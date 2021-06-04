@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-# Top toolbar languages selector for help center
-# https://user-images.githubusercontent.com/40513035/119119895-83347c80-b9e0-11eb-87ef-47dd537b9a5a.png
-
 module TestingHelpCentreOnlyoffice
+  # Top toolbar languages selector for help center
+  # https://user-images.githubusercontent.com/40513035/119119895-83347c80-b9e0-11eb-87ef-47dd537b9a5a.png
   module HelpCenterLanguages
     include PageObject
 

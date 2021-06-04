@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# module for using palladium. It help to init palladium object and set result
 module TestingHelpCentreOnlyoffice
+  # module for using palladium. It help to init palladium object and set result
   module PalladiumWrapper
     # init palladium object
     # @param [Hash] params is a hash with all necessary data for work with palladium

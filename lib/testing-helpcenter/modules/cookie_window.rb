@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-# Handle operations with cookie window
-# https://user-images.githubusercontent.com/40513035/118627283-6f8adb00-b780-11eb-93e3-e605bd2f039f.png
-
 module TestingHelpCentreOnlyoffice
+  # Handle operations with cookie window
+  # https://user-images.githubusercontent.com/40513035/118627283-6f8adb00-b780-11eb-93e3-e605bd2f039f.png
   module CookieWindow
     include PageObject
 

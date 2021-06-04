@@ -7,8 +7,8 @@ require_relative 'test_manger/test_manager'
 
 include OnlyofficeWebdriverWrapper
 
-# Instance of browser to perform actions
 module TestingHelpCentreOnlyoffice
+  # Instance of browser to perform actions
   class HelpCenterInstance
     attr_accessor :webdriver
     alias driver webdriver

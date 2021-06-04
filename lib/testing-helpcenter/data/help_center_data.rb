@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module TestingHelpCentreOnlyoffice
+  # Help Center data
   class HelpCenterData
     def self.help_center_languages
       %w[en-US de-DE fr-FR es-ES ru-RU it-IT]
