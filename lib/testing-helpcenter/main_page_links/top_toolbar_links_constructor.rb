@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
-# Constructor for all links on main page for Installation Guides, Integration Guides, Administration Guides, User Guides, Developer Guides, Contribution Guides
-
 module TestingHelpCentreOnlyoffice
+  # Constructor for all links on main page for Installation Guides, Integration Guides, Administration Guides, User Guides
   class TopToolbarLinksConstructor
     include PageObject
 

@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
-# Left side bar search for help center
-# https://user-images.githubusercontent.com/40513035/120606733-5d599f80-c404-11eb-8fa4-d0f731ab2515.png
 require_relative '../help_center_search_result'
+
 module TestingHelpCentreOnlyoffice
+  # Left side bar search for help center
+  # https://user-images.githubusercontent.com/40513035/120606733-5d599f80-c404-11eb-8fa4-d0f731ab2515.png
   module HelpCenterSideBarSearch
     include PageObject
 

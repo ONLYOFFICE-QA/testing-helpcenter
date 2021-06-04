@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module TestingHelpCentreOnlyoffice
+  # Top toolbar menu elements and it's id
   class ToolbarInfo
     def self.administration_links
       {

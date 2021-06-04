@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-# /guides/become-translator.aspx
-# https://user-images.githubusercontent.com/40513035/120451570-697f2780-c346-11eb-9fbd-577b0b625a3d.png
 require_relative '../search/modules/help_center_side_bar_search'
 
 module TestingHelpCentreOnlyoffice
+  # /guides/become-translator.aspx
+  # https://user-images.githubusercontent.com/40513035/120451570-697f2780-c346-11eb-9fbd-577b0b625a3d.png
   class HelpCenterContribution
     include PageObject
     include HelpCenterSideBarSearch

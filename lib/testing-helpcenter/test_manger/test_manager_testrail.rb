@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# Module for working with testrail test management data
 module TestingHelpCentreOnlyoffice
+  # Module for working with testrail test management data
   module TestManagerTestrail
     # @param params [Hash] testrail params
     # @return [nil]

@@ -12,6 +12,8 @@ require_relative 'external_products/site_sign_up'
 require_relative 'external_products/api_main_page'
 
 module TestingHelpCentreOnlyoffice
+  # Help Center Home page
+  # https://user-images.githubusercontent.com/40513035/120761168-c0f9d080-c4c9-11eb-8c37-dfc66a7a1855.png
   class HelpCenterHome
     attr_accessor :instance
 

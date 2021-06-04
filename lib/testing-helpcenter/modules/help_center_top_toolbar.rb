@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# Help center top toolbar
-# https://user-images.githubusercontent.com/40513035/120143348-d3f06600-c194-11eb-9f07-d3f125d3df6b.png
 require_relative '../help_center_home'
 require_relative '../external_products/api_main_page'
 require_relative '../main_page_links/help_center_contribution'
@@ -9,6 +7,8 @@ require_relative '../main_page_links/top_toolbar_links_constructor'
 require_relative 'help_center_languages'
 
 module TestingHelpCentreOnlyoffice
+  # Help center top toolbar
+  # https://user-images.githubusercontent.com/40513035/120143348-d3f06600-c194-11eb-9f07-d3f125d3df6b.png
   module HelpCenterTopToolbar
     include PageObject
     include HelpCenterLanguages

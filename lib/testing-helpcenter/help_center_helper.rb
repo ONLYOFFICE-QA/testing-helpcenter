@@ -3,6 +3,7 @@
 require_relative 'help_center_test_instance'
 
 module TestingHelpCentreOnlyoffice
+  # Help center additional methods
   class HelpCenterHelper
     attr_accessor :test
 

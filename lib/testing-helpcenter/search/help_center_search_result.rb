@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-# /search.aspx
-# https://user-images.githubusercontent.com/40513035/118632927-c646e380-b785-11eb-883a-cfd2fd882f70.png
 require_relative 'search_result_item'
 
 module TestingHelpCentreOnlyoffice
+  # /search.aspx
+  # https://user-images.githubusercontent.com/40513035/118632927-c646e380-b785-11eb-883a-cfd2fd882f70.png
   class HelpCenterSearchResultPage
     include PageObject
 
