@@ -13,16 +13,17 @@ describe 'Help center search' do
     @test.webdriver.quit
   end
 
-  it 'Non-existing word return `No results matching your query could be found` and zero found results' do
-    result_page = @help_center_home_page.search('Fakeword')
-    expect(result_page.no_result_found_element).to be_present
-    expect(result_page.search_result_count).to eq(0)
+  describe 'Main page search' do
+    it_behaves_like 'help_center_search', 'Main Page' do
+      let(:current_page) { @help_center_home_page }
+    end
   end
 
-  it 'Search for existing method result several results' do
-    search_string = 'TEST'
-    result_page = @help_center_home_page.search(search_string)
-    expect(result_page.search_result_count).to be > 0
-    expect(result_page.search_results.first.snippet_text).to be_include(search_string)
+  describe 'Side menu search' do
+    let(:contribution_page) { @help_center_home_page.click_toolbar_contribution }
+
+    it_behaves_like 'help_center_search', 'Side Menu' do
+      let(:current_page) { contribution_page }
+    end
   end
 end
