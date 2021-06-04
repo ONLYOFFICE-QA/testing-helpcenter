@@ -5,7 +5,7 @@ require:
 inherit_from: .rubocop_todo.yml
 
 # Totally disable this check
-# since we dont initialize class directly in spec
-# and checking of one class cen be split into different specs
+# since we don't initialize class directly in spec
+# and checking of one class can be split into different specs
 RSpec/DescribeClass:
   Enabled: false
