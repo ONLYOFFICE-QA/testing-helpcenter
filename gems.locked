@@ -66,6 +66,7 @@ GEM
     parser (3.0.1.1)
       ast (~> 2.4.1)
     rainbow (3.0.0)
+    rake (13.0.3)
     regexp_parser (2.1.1)
     rexml (3.2.5)
     rspec (3.10.0)
@@ -110,6 +111,7 @@ GEM
     watir (6.19.1)
       regexp_parser (>= 1.2, < 3)
       selenium-webdriver (>= 3.142.7)
+    wrata_api (0.2.0)
     yml_reader (0.7)
 
 PLATFORMS
@@ -122,12 +124,14 @@ DEPENDENCIES
   overcommit
   page-object
   palladium
+  rake
   rspec
   rspec-retry
   rspec_passed_time_formatter
   rubocop
   rubocop-performance
   rubocop-rspec
+  wrata_api
 
 BUNDLED WITH
    2.1.4
