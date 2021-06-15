@@ -12,7 +12,7 @@ describe 'Help center main page links' do
   end
 
   describe 'Links under search field' do
-    TestingHelpCentreOnlyoffice::HelpCenterMainPageData.main_page_links.each do |title|
+    TestingHelpCentreOnlyoffice::HelpCenterData.main_page_links.each do |title|
       it "`#{title}` link under search field works" do
         expect(@help_center_home_page).to be_help_center_links_under_search_field_alive(title)
       end
@@ -20,7 +20,7 @@ describe 'Help center main page links' do
   end
 
   describe 'Block links' do
-    TestingHelpCentreOnlyoffice::HelpCenterMainPageData.main_page_block_links.each do |header_title, body_titles|
+    TestingHelpCentreOnlyoffice::HelpCenterData.main_page_block_links.each do |header_title, body_titles|
       it "Block `#{header_title}` header link works" do
         expect(@help_center_home_page).to be_help_center_block_header_link_alive(header_title)
       end

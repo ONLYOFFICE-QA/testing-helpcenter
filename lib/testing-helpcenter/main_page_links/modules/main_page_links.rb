@@ -36,8 +36,8 @@ module TestingHelpCentreOnlyoffice
       link_success_response?(link_element.attribute('href'))
     end
 
-    # determines success based on 2xx response code
-    # http://www.restapitutorial.com/httpstatuscodes.html
+    # @param link [String] link url to check
+    # @return [True] if responce is successfully 2xx, or raise an exception
     def link_success_response?(link)
       response = HTTParty.head(link).response.code
       @instance.webdriver.webdriver_error("Link `#{link}` answered with #{response}") unless response.start_with?('2')
