@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'yaml'
+
 module TestingHelpCentreOnlyoffice
   # Help Center data
   class HelpCenterData
@@ -16,6 +18,14 @@ module TestingHelpCentreOnlyoffice
         'ru-RU': 'ПОПРОБОВАТЬ В ОБЛАКЕ',
         'it-IT': 'PROVALO NEL CLOUD'
       }
+    end
+
+    def self.main_page_links
+      ['Installation', 'Administration', 'Integration', 'User Guides', 'Contribution', 'Development']
+    end
+
+    def self.main_page_block_links
+      @main_page_block_links ||= YAML.load_file("#{__dir__}/main_page_block_info.yml")
     end
   end
 end
