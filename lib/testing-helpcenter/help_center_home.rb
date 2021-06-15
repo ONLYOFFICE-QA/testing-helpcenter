@@ -2,7 +2,9 @@
 
 require_relative 'help_center_helper'
 require_relative 'data/help_center_data'
+require_relative 'data/help_center_main_page_data'
 require_relative 'data/toolbar_info'
+require_relative 'main_page_links/modules/main_page_links'
 require_relative 'main_page_links/help_center_contribution'
 require_relative 'main_page_links/top_toolbar_links_constructor'
 require_relative 'modules/cookie_window'
@@ -19,6 +21,7 @@ module TestingHelpCentreOnlyoffice
 
     include PageObject
     include CookieWindow
+    include HelpCenterMainPageLinks
     include HelpCenterTopToolbar
 
     text_field(:main_page_search, xpath: "//div[@class='search_line mainSearch']/input[@id='txtSearch']")

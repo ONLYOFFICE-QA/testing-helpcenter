@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
+gem 'httparty'
 gem 'onlyoffice_tcm_helper'
 gem 'onlyoffice_testrail_wrapper'
 gem 'onlyoffice_webdriver_wrapper'
