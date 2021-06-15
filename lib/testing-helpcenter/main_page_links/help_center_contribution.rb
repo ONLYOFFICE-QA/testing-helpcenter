@@ -9,6 +9,7 @@ module TestingHelpCentreOnlyoffice
     include PageObject
     include HelpCenterSideBarSearch
 
+    link(:logo, xpath: "//div[@class='logo push']/a")
     div(:participating_block, xpath: "//div[@id='Participating_block']")
 
     def initialize(instance)
@@ -19,6 +20,11 @@ module TestingHelpCentreOnlyoffice
 
     def participating_in_translation_block_present?
       participating_block_element.present?
+    end
+
+    def click_logo
+      logo_element.click
+      HelpCenterHome.new(@instance)
     end
   end
 end

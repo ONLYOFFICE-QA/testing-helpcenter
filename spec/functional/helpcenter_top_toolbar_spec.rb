@@ -30,4 +30,10 @@ describe 'Help center top toolbar check' do
     site_sign_up = @help_center_home_page.try_in_the_cloud
     expect(site_sign_up).to be_a TestingHelpCentreOnlyoffice::SiteSignUp
   end
+
+  it 'Check `Logo` button leads to main page' do
+    contribution_page = @help_center_home_page.click_toolbar_contribution
+    home_page = contribution_page.click_logo
+    expect(home_page).to be_a TestingHelpCentreOnlyoffice::HelpCenterHome
+  end
 end
