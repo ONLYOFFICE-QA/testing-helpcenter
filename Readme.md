@@ -1,6 +1,6 @@
 # Help Center testing
 
-This project tests Onlyoffice Help Center site: https://helpcenter.onlyoffice.com/
+This project tests Onlyoffice Help Center site: <https://helpcenter.onlyoffice.com/>
 
 ## How to run tests
 
@@ -13,7 +13,7 @@ Locally
 
 Remotely
 
-1. Login to your [wrata](<https://github.com/ONLYOFFICE/testing-wrata>) instance 
+1. Login to your [wrata](<https://github.com/ONLYOFFICE/testing-wrata>) instance
 with user `Helpcenter`
 2. Obtain API key and use it via terminal
 3. `rake wrata:run_site_tests`
