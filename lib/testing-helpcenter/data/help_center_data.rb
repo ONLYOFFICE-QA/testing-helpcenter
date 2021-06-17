@@ -27,5 +27,9 @@ module TestingHelpCentreOnlyoffice
     def self.main_page_block_links
       @main_page_block_links ||= YAML.load_file("#{__dir__}/main_page_block_info.yml")
     end
+
+    def self.footer_links
+      @footer_links ||= YAML.load_file("#{__dir__}/footer_links_info.yml")
+    end
   end
 end

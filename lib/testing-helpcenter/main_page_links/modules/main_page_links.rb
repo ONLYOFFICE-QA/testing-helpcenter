@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
+require_relative 'links_response'
+
 module TestingHelpCentreOnlyoffice
   # Main Page links xpath, elements
   # https://user-images.githubusercontent.com/40513035/122003839-75b4ad00-cd68-11eb-9bfa-e1e98f5f394b.png
   module HelpCenterMainPageLinks
+    include LinksResponse
     # Main page block links constructor
     # https://user-images.githubusercontent.com/40513035/122003956-9c72e380-cd68-11eb-9eac-a942338a5f00.png
     def help_center_block_header_link_xpath(title)
@@ -34,14 +37,6 @@ module TestingHelpCentreOnlyoffice
       link_xpath = "//div[@id='productsMainContent']//a[text()='#{title}']"
       link_element = @instance.webdriver.driver.find_element(:xpath, link_xpath)
       link_success_response?(link_element.attribute('href'))
-    end
-
-    # @param link [String] link url to check
-    # @return [True] if responce is successfully 2xx, or raise an exception
-    def link_success_response?(link)
-      response = HTTParty.head(link).response.code
-      @instance.webdriver.webdriver_error("Link `#{link}` answered with #{response}") unless response.start_with?('2')
-      true
     end
   end
 end
