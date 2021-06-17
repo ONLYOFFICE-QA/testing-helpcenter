@@ -16,6 +16,6 @@ jobs:
       - name: Check source files using `rubocop`
         run: rubocop
       - name: Check markdown files using `markdownlint`
-          run: |
-            npm install -g markdownlint-cli
-            markdownlint '*.md'
+        run: |
+          npm install -g markdownlint-cli
+          markdownlint '*.md'
