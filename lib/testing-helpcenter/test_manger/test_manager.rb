@@ -37,7 +37,7 @@ module TestingHelpCentreOnlyoffice
     def add_result(example, instance, comment = '')
       result = @tcm_helper.parse(example)
       comment = "#{comment}Error #{instance.webdriver.webdriver_screenshot}\n" if test_failed_and_has_no_screenshot?(result,
-                                                                                                            example)
+                                                                                                                     example)
       formatting_describer(comment)
       @testrail&.add_result_to_test_case(example, comment)
 
