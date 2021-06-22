@@ -17,10 +17,10 @@ module TestingHelpCentreOnlyoffice
 
     def open_main_page_faq(title)
       faq_answer_link_title = HelpCenterData.main_page_faq_info[title][0]
-      return if faq_answer_link_present?(title, faq_answer_link_title)
+      return if faq_answer_link_visible?(title, faq_answer_link_title)
 
       @instance.webdriver.driver.find_element(:xpath, faq_question_xpath(title)).click
-      @instance.webdriver.wait_until { faq_answer_link_present?(title, faq_answer_link_title) }
+      @instance.webdriver.wait_until { faq_answer_link_visible?(title, faq_answer_link_title) }
     end
 
     def faq_question_xpath(title)
@@ -31,7 +31,7 @@ module TestingHelpCentreOnlyoffice
       "#{faq_question_xpath(faq_title)}/..//a[text()='#{answer_title}']"
     end
 
-    def faq_answer_link_present?(faq_title, answer_title)
+    def faq_answer_link_visible?(faq_title, answer_title)
       @instance.webdriver.element_visible?(faq_answer_xpath(faq_title, answer_title))
     end
 
