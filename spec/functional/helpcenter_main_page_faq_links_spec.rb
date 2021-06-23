@@ -11,7 +11,7 @@ describe 'Help center FAQ links' do
     @test.webdriver.quit
   end
 
-  TestingHelpCentreOnlyoffice::HelpCenterData.main_page_faq_info.each do |question_title, answer_links|
+  TestingHelpCentreOnlyoffice::HelpCenterData.main_page_faq_links.each do |question_title, answer_links|
     describe question_title.to_s do
       before { @help_center_home_page.open_main_page_faq(question_title) }
 
@@ -24,6 +24,6 @@ describe 'Help center FAQ links' do
   end
 
   it "Main page FAQ questions number didn't change" do
-    expect(@help_center_home_page.faq_number).to eq(TestingHelpCentreOnlyoffice::HelpCenterData.main_page_faq_info.count)
+    expect(@help_center_home_page.faq_number).to eq(TestingHelpCentreOnlyoffice::HelpCenterData.main_page_faq_links.count)
   end
 end

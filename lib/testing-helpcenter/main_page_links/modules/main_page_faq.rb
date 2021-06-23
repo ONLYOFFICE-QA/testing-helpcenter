@@ -16,7 +16,7 @@ module TestingHelpCentreOnlyoffice
     end
 
     def open_main_page_faq(title)
-      faq_answer_link_title = HelpCenterData.main_page_faq_info[title][0]
+      faq_answer_link_title = HelpCenterData.main_page_faq_links[title][0]
       return if faq_answer_link_visible?(title, faq_answer_link_title)
 
       @instance.webdriver.driver.find_element(:xpath, faq_question_xpath(title)).click
