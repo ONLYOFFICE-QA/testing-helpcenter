@@ -16,4 +16,4 @@ Remotely
 1. Login to your [wrata](<https://github.com/ONLYOFFICE/testing-wrata>) instance
 with user `Helpcenter`
 2. Obtain API key and use it via terminal
-3. `rake wrata:run_site_tests`
+3. `rake wrata:run_help_center_tests`
