@@ -31,5 +31,9 @@ module TestingHelpCentreOnlyoffice
     def self.footer_links
       @footer_links ||= YAML.load_file("#{__dir__}/footer_links_info.yml")
     end
+
+    def self.main_page_faq_links
+      @main_page_faq_links ||= YAML.load_file("#{__dir__}/main_page_faq_info.yml")
+    end
   end
 end
