@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'help_center_helper'
+require_relative 'help_center_version_helper'
 require_relative 'data/help_center_data'
 require_relative 'data/toolbar_info'
 require_relative 'main_page_links/modules/main_page_links'

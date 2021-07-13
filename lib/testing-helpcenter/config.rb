@@ -16,10 +16,6 @@ module TestingHelpCentreOnlyoffice
       @browser = params.fetch(:browser, :chrome)
     end
 
-    def version
-      Time.new.strftime('%d/%m/%Y')
-    end
-
     private
 
     # @return [String] server on which test are performed
