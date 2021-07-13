@@ -18,7 +18,7 @@ module TestingHelpCentreOnlyoffice
 
     # @return [String] hash of site by url `help_center/revision or test run date`
     def help_center_version
-      version_uri = URI("#{config.server}/revision")
+      version_uri = URI("#{@server}/revision")
       revision_data = Net::HTTP.get(version_uri)
       if revision_data == "changelog.xml doesn't exist"
         Time.new.strftime('%d/%m/%Y')
