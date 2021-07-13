@@ -16,6 +16,20 @@ module TestingHelpCentreOnlyoffice
       @browser = params.fetch(:browser, :chrome)
     end
 
+    # @return [String] hash of site by url `help_center/revision or test run date`
+    def help_center_version
+      version_uri = URI("#{config.server}/revision")
+      revision_data = Net::HTTP.get(version_uri)
+      if revision_data == "changelog.xml doesn't exist"
+        Time.new.strftime('%d/%m/%Y')
+      else
+        revision_data.split[0]
+      end
+    rescue StandardError => e
+      OnlyofficeLoggerHelper.log("Cannot get site hash because of #{e}")
+      'unknown'
+    end
+
     private
 
     # @return [String] server on which test are performed

@@ -72,7 +72,7 @@ module TestingHelpCentreOnlyoffice
     end
 
     def test_plan_name
-      "Help center domain: #{config.server}, Version: #{TestingHelpCentreOnlyoffice::HelpCenterVersionHelper.fetch_help_center_hash}"
+      "Help center domain: #{config.server}, Version: #{config.help_center_version}"
     end
 
     private
