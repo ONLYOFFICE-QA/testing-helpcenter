@@ -6,10 +6,11 @@ test_manager = TestingHelpCentreOnlyoffice::TestManager.new(suite_name: File.bas
 describe 'Help center main page links' do
   before(:all) { @help_center_home_page, @test = TestingHelpCentreOnlyoffice::HelpCenterHelper.new.open_help_center_main_page(config) }
 
-  after :all do |example|
+  after do |example|
     test_manager.add_result(example, @test)
-    @test.webdriver.quit
   end
+
+  after(:all) { @test.webdriver.quit }
 
   describe 'Links under search field' do
     TestingHelpCentreOnlyoffice::HelpCenterData.main_page_links.each do |title|
