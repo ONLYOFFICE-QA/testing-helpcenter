@@ -26,7 +26,7 @@ describe 'Help center top toolbar check' do
     end
   end
 
-  it 'Check `Try in the cloud` button ' do
+  it 'Check `Try in the cloud` button' do
     site_sign_up = @help_center_home_page.try_in_the_cloud
     expect(site_sign_up).to be_a TestingHelpCentreOnlyoffice::SiteSignUp
   end
