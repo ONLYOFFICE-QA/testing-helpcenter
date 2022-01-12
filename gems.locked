@@ -1,3 +1,17 @@
+GIT
+  remote: https://github.com/ONLYOFFICE-QA/onlyoffice_webdriver_wrapper
+  revision: c9f99473092aefb8c929076a2151f8659d8865e1
+  branch: feature/webdriver-4
+  specs:
+    onlyoffice_webdriver_wrapper (0.22.1)
+      headless (~> 2)
+      onlyoffice_file_helper (~> 0)
+      onlyoffice_logger_helper (~> 1)
+      onlyoffice_s3_wrapper (~> 0, >= 0.5.0)
+      page-object (~> 2)
+      selenium-webdriver (~> 4)
+      watir (~> 7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -18,7 +32,7 @@ GEM
       aws-sigv4 (~> 1.4)
     aws-sigv4 (1.4.0)
       aws-eventstream (~> 1, >= 1.0.2)
-    childprocess (3.0.0)
+    childprocess (4.1.0)
     concurrent-ruby (1.1.9)
     data_magic (1.2)
       faker (>= 1.1.2)
@@ -51,14 +65,6 @@ GEM
     onlyoffice_testrail_wrapper (0.3.0)
       onlyoffice_bugzilla_helper (~> 0.1)
       onlyoffice_logger_helper (~> 1)
-    onlyoffice_webdriver_wrapper (0.22.1)
-      headless (~> 2)
-      onlyoffice_file_helper (~> 0)
-      onlyoffice_logger_helper (~> 1)
-      onlyoffice_s3_wrapper (~> 0, >= 0.5.0)
-      page-object (~> 2)
-      selenium-webdriver (~> 3)
-      watir (~> 6)
     overcommit (0.58.0)
       childprocess (>= 0.6.3, < 5)
       iniparse (~> 1.4)
@@ -112,13 +118,14 @@ GEM
       rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
     rubyzip (2.3.2)
-    selenium-webdriver (3.142.7)
-      childprocess (>= 0.5, < 4.0)
+    selenium-webdriver (4.1.0)
+      childprocess (>= 0.5, < 5.0)
+      rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
     unicode-display_width (2.1.0)
-    watir (6.19.1)
+    watir (7.1.0)
       regexp_parser (>= 1.2, < 3)
-      selenium-webdriver (>= 3.142.7)
+      selenium-webdriver (~> 4.0)
     wrata_api (0.2.0)
     yml_reader (0.7)
 
@@ -129,7 +136,7 @@ DEPENDENCIES
   httparty
   onlyoffice_tcm_helper
   onlyoffice_testrail_wrapper
-  onlyoffice_webdriver_wrapper
+  onlyoffice_webdriver_wrapper!
   overcommit
   page-object
   palladium
@@ -144,4 +151,4 @@ DEPENDENCIES
   wrata_api
 
 BUNDLED WITH
-   2.3.3
+   2.3.4
