@@ -34,13 +34,14 @@ module TestingHelpCentreOnlyoffice
 
     # @return [String] server on which test are performed
     def default_server
-      return 'https://helpcenter.onlyoffice.com/' if ENV['SPEC_REGION']&.include?('com')
+      return 'https://helpcenter.onlyoffice.com/' if ENV.fetch('SPEC_REGION', 'unknown').include?('com')
 
       'https://test-helpcenter.onlyoffice.com/'
     end
 
     def default_language
-      return ENV['SPEC_LANGUAGE'] if HelpCenterData.help_center_languages.include?(ENV['SPEC_LANGUAGE'])
+      env_language = ENV.fetch('SPEC_LANGUAGE', 'unknown')
+      return env_language if HelpCenterData.help_center_languages.include?(env_language)
 
       'en-US'
     end
