@@ -6,8 +6,6 @@ require 'onlyoffice_webdriver_wrapper'
 require 'palladium'
 require_relative 'test_manger/test_manager'
 
-include OnlyofficeWebdriverWrapper
-
 module TestingHelpCentreOnlyoffice
   # Instance of browser to perform actions
   class HelpCenterInstance
@@ -16,7 +14,7 @@ module TestingHelpCentreOnlyoffice
     alias selenium webdriver
 
     def initialize(config)
-      @webdriver = WebDriver.new(config.browser, record_video: false)
+      @webdriver = OnlyofficeWebdriverWrapper::WebDriver.new(config.browser, record_video: false)
       @webdriver.open(config.server)
     end
   end
