@@ -6,10 +6,6 @@ require 'onlyoffice_testrail_wrapper'
 require_relative 'palladium_wrapper'
 require_relative 'test_manager_testrail'
 
-include OnlyofficeTestrailWrapper
-include OnlyofficeTcmHelper
-include Palladium
-
 module TestingHelpCentreOnlyoffice
   # it is helper for adding result to test case management system, like palladium and testrail
   # for using, create TestManager object in your mail describe

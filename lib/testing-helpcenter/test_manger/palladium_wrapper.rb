@@ -10,11 +10,11 @@ module TestingHelpCentreOnlyoffice
     # :product - is a name of product. All results wil be added to it. Product will be created if not exist
     # :run - is a name of plan. All results wil be added to it. Run will be created if not exist
     def init_palladium(params = {})
-      Palladium.new(host: 'palladium.teamlab.info',
-                    token: palladium_token,
-                    product: params[:product_name],
-                    plan: params[:plan_name],
-                    run: params[:suite_name])
+      Palladium::Palladium.new(host: 'palladium.teamlab.info',
+                               token: palladium_token,
+                               product: params[:product_name],
+                               plan: params[:plan_name],
+                               run: params[:suite_name])
     rescue StandardError => e
       OnlyofficeLoggerHelper.log("Cant init palladium. Error: #{e}", 41)
     end
