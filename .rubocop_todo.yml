@@ -53,14 +53,6 @@ RSpec/InstanceVariable:
     - 'spec/functional/helpcenter_top_toolbar_menu_spec.rb'
     - 'spec/functional/helpcenter_top_toolbar_spec.rb'
 
-# Offense count: 2
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedShorthandSyntax, UseHashRocketsWithSymbolValues, PreferHashRocketsForNonAlnumEndingSymbols.
-# SupportedStyles: ruby19, hash_rockets, no_mixed_keys, ruby19_no_mixed_keys
-# SupportedShorthandSyntax: always, never, either
-Style/HashSyntax:
-  EnforcedStyle: ruby19
-
 # Offense count: 4
 Style/MixinUsage:
   Exclude:
