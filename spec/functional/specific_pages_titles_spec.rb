@@ -18,7 +18,7 @@ describe 'Help center footer links' do
   it 'DesktopEditors Install flatpak title' do
     page_to_open = "#{test.webdriver.get_url}installation/desktop-install-flatpak.aspx"
     test.webdriver.open(page_to_open)
-    expect(test.webdriver.get_title_of_current_tab).to eq('ONLYOFFICE - Cloud Office Applications')
+    expect(test.webdriver.get_title_of_current_tab).to eq('How to install ONLYOFFICE Desktop Editors for Linux to your computer using Flatpak? - ONLYOFFICE')
   end
 
   it 'DesktopEditors Install Ubuntu title' do
