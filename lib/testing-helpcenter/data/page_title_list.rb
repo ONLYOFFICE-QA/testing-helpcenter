@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-require 'json'
 
+require 'json'
+# Open JSON file and parse it's data to PageTitleList object
 class PageTitleList
   attr_reader :hash
 
