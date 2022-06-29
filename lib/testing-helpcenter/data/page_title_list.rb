@@ -5,8 +5,8 @@ require 'json'
 class PageTitleList
   attr_reader :hash
 
-  def initialize(file_path)
-    @raw_data = File.read(file_path)
-    @hash = JSON.parse(@raw_data, { symbolize_names: true })
+  def initialize(file_path = 'lib/testing-helpcenter/data/page_titles.json')
+    raw_data = File.read(file_path)
+    @hash = JSON.parse(raw_data, { symbolize_names: true })
   end
 end

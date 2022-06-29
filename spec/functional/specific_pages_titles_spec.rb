@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require_relative '../../lib/testing-helpcenter/data/page_title_list'
 
 test_manager = TestingHelpCentreOnlyoffice::TestManager.new(suite_name: File.basename(__FILE__))
 test = nil
@@ -18,10 +17,10 @@ describe 'Help center footer links' do
   end
 
   page_hash.hash.each do |hash|
-    it "check page title of #{hash[:url]}" do
+    it "Check page title of '#{hash[:url]}'" do
       page_to_open = "#{test.webdriver.get_url}#{hash[:url]}"
       test.webdriver.open(page_to_open)
-      expect(test.webdriver.get_title_of_current_tab).to eq((hash[:title]).to_s)
+      expect(test.webdriver.get_title_of_current_tab).to eq((hash[:title]))
     end
   end
 end

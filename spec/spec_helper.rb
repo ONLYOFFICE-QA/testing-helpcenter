@@ -2,6 +2,7 @@
 
 require_relative '../lib/testing_helpcenter'
 require_relative '../shared_examples/help_center_search'
+require_relative '../lib/testing-helpcenter/data/page_title_list'
 require 'onlyoffice_testrail_wrapper'
 require 'rspec'
 require 'rspec/retry'
