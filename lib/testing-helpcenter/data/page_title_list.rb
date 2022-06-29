@@ -7,6 +7,6 @@ class PageTitleList
 
   def initialize(file_path = 'lib/testing-helpcenter/data/page_titles.json')
     raw_data = File.read(file_path)
-    @hash = JSON.parse(raw_data, { symbolize_names: true })
+    @hash = JSON.parse(raw_data, symbolize_names: true)
   end
 end

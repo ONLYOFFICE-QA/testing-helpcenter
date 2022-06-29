@@ -4,7 +4,7 @@ require 'spec_helper'
 
 test_manager = TestingHelpCentreOnlyoffice::TestManager.new(suite_name: File.basename(__FILE__))
 test = nil
-page_hash = PageTitleList.new('lib/testing-helpcenter/data/page_titles.json')
+page_hash = PageTitleList.new
 
 describe 'Help center footer links' do
   before do
