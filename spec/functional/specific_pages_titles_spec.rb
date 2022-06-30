@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require_relative '../../lib/testing-helpcenter/data/page_title_list'
 
 test_manager = TestingHelpCentreOnlyoffice::TestManager.new(suite_name: File.basename(__FILE__))
 test = nil
-
 page_hash = PageTitleList.new
 
 describe 'Help center footer links' do
