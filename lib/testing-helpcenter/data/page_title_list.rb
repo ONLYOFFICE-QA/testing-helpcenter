@@ -9,6 +9,4 @@ class PageTitleList
     raw_data = File.read(file_path)
     @hash = JSON.parse(raw_data, symbolize_names: true)
   end
-require 'json'
-
 end
