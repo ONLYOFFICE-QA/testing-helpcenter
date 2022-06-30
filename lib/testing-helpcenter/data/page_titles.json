@@ -1,22 +1,106 @@
 [
-      {
-        "url": "installation/desktop-install-flatpak.aspx",
-        "title": "How to install ONLYOFFICE Desktop Editors for Linux to your computer using Flatpak? - ONLYOFFICE"
-      },
-      {
-        "url": "installation/desktop-install-ubuntu.aspx",
-        "title": "Installing ONLYOFFICE Desktop Editors to Debian, Ubuntu and derivatives - ONLYOFFICE"
-      },
-      {
-        "url": "installation/desktop-install-rhel.aspx",
-        "title": "Installing ONLYOFFICE Desktop Editors to Red Hat, CentOS and derivatives - ONLYOFFICE"
-      },
-      {
-        "url": "installation/desktop-install-zorinos.aspx",
-        "title": "Installing ONLYOFFICE Desktop Editors on Zorin OS - ONLYOFFICE"
-      }
-<<<<<<< HEAD
+  {
+    "url": "installation/desktop-install-flatpak.aspx",
+    "title": "How to install ONLYOFFICE Desktop Editors for Linux to your computer using Flatpak? - ONLYOFFICE"
+  },
+  {
+    "url": "installation/desktop-install-ubuntu.aspx",
+    "title": "Installing ONLYOFFICE Desktop Editors to Debian, Ubuntu and derivatives - ONLYOFFICE"
+  },
+  {
+    "url": "installation/desktop-install-rhel.aspx",
+    "title": "Installing ONLYOFFICE Desktop Editors to Red Hat, CentOS and derivatives - ONLYOFFICE"
+  },
+  {
+    "url": "installation/desktop-install-zorinos.aspx",
+    "title": "Installing ONLYOFFICE Desktop Editors on Zorin OS - ONLYOFFICE"
+  },
+  {
+    "url": "ONLYOFFICE-Editors/ONLYOFFICE-Document-Editor/UsageInstructions/InsertContentControls.aspx",
+    "title": "Insert content controls - ONLYOFFICE"
+  },
+  {
+    "url": "server/linux/document/linux-installation.aspx",
+    "title": "Installing ONLYOFFICE Docs for Debian, Ubuntu, and derivatives - ONLYOFFICE"
+  },
+  {
+    "url": "server/developer-edition/docker/docker-installation.aspx",
+    "title": "Installing ONLYOFFICE Docs for Docker on a local server - ONLYOFFICE"
+  },
+  {
+    "url":"server/docker/document/add-interface-language.aspx",
+    "title": "Adding a new interface language to ONLYOFFICE Docs - ONLYOFFICE"
+  },
+  {
+    "url": "server/document/available-languages.aspx",
+    "title": "Languages available for ONLYOFFICE Docs interface - ONLYOFFICE"
+  },
+  {
+    "url": "server/document/document-server-proxy.aspx",
+    "title": "Using ONLYOFFICE Docs behind the proxy - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-developer-install-windows.aspx",
+    "title": "Installing ONLYOFFICE Docs for Windows on a local server - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-developer-install-ubuntu.aspx",
+    "title": "Installing ONLYOFFICE Docs for Debian, Ubuntu, and derivatives - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-developer-install-docker.aspx",
+    "title": "Installing ONLYOFFICE Docs for Docker on a local server - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-community-https-linux.aspx",
+    "title": "Switching ONLYOFFICE Docs to HTTPS protocol - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-community-install-fonts-linux.aspx",
+    "title": "Adding fonts to ONLYOFFICE Docs - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-developer-change-theme.aspx",
+    "title": "Changing interface themes in ONLYOFFICE Docs - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-developer-configuring.aspx",
+    "title": "Configuring ONLYOFFICE Docs Developer Edition - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-developer-configuring.aspx#wopi-enable",
+    "title": "Configuring ONLYOFFICE Docs Developer Edition - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-developer-configuring.aspx#AutoAssembly",
+    "title": "Configuring ONLYOFFICE Docs Developer Edition - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-developer-configuring.aspx#SecretKey",
+    "title": "Configuring ONLYOFFICE Docs Developer Edition - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-developer-configuring.aspx#Token",
+    "title": "Configuring ONLYOFFICE Docs Developer Edition - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay",
+    "title": "Configuring ONLYOFFICE Docs Developer Edition - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-developer-configuring.aspx#services-CoAuthoring-server-assemblyFormatAsOrigin",
+    "title": "Configuring ONLYOFFICE Docs Developer Edition - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-developer-configuring.aspx#services-CoAuthoring-server-tokenRequiredParams",
+    "title": "Configuring ONLYOFFICE Docs Developer Edition - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-developer-configuring.aspx#WOPI",
+    "title": "Configuring ONLYOFFICE Docs Developer Edition - ONLYOFFICE"
+  },
+  {
+    "url": "installation/docs-developer-configuring.aspx#IPFilter",
+    "title": "Configuring ONLYOFFICE Docs Developer Edition - ONLYOFFICE"
+  }
 ]
-=======
-]
->>>>>>> 960e86f (Add JSON)
