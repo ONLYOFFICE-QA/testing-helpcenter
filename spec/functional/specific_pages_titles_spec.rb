@@ -9,6 +9,7 @@ page_hash = PageTitleList.new
 describe 'Help center footer links' do
   before do
     _help_center_home_page, test = TestingHelpCentreOnlyoffice::HelpCenterHelper.new.open_help_center_main_page(config)
+
   end
 
   after do |example|
