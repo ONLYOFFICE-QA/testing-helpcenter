@@ -15,9 +15,9 @@ describe 'Help center tags' do
     test.webdriver.quit
   end
 
-  it 'checks tags list empty?' do
-    tags_page = @help_center_home_page.tags_click
+  it 'checks tags list not empty?' do
+    tags_page = @help_center_home_page.open_tags_page
     tags = tags_page.tags_list
-    expect(tags).not_to eq(0)
+    expect(tags).not_to be_empty
   end
 end

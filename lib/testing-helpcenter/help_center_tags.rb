@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Get array of tags from the https://helpcenter.onlyoffice.com/tags.aspx
+# Methods to work with tag list on https://helpcenter.onlyoffice.com/tags.aspx
 class HelpCenterTags
   include PageObject
 
