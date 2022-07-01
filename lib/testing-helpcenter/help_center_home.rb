@@ -57,5 +57,10 @@ module TestingHelpCentreOnlyoffice
       try_in_the_cloud_element.click
       SiteSignUp.new(@instance)
     end
+
+    def tags_click
+      @instance.webdriver.open("#{@instance.webdriver.get_url}/tags.aspx")
+      HelpCenterTags.new(@instance)
+    end
   end
 end
