@@ -3,7 +3,7 @@
 # Get array of tags from the https://helpcenter.onlyoffice.com/tags.aspx
 class HelpCenterTags
   include PageObject
-  
+
   def initialize(instance)
     super(instance.webdriver.driver)
     @instance = instance
