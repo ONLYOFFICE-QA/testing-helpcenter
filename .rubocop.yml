@@ -17,3 +17,8 @@ Bundler/GemFilename:
 # and checking of one class can be split into different specs
 RSpec/DescribeClass:
   Enabled: false
+
+# We use  instance variables to simplify code
+# And not to reopen same page several times
+RSpec/InstanceVariable:
+  Enabled: false
