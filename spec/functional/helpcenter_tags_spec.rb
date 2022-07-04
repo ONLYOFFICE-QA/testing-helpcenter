@@ -4,6 +4,7 @@ require 'spec_helper'
 
 test_manager = TestingHelpCentreOnlyoffice::TestManager.new(suite_name: File.basename(__FILE__))
 test = nil
+tags_list_from_data = TagsListFromData.new
 
 describe 'Help center tags' do
   before do
@@ -15,9 +16,8 @@ describe 'Help center tags' do
     test.webdriver.quit
   end
 
-  it 'checks tags list not empty?' do
+  it 'Check tags from list' do
     tags_page = @help_center_home_page.open_tags_page
-    tags = tags_page.tags_list
-    expect(tags).not_to be_empty
+    expect(tags_page.tags_list).to eq(tags_list_from_data.tags)
   end
 end
