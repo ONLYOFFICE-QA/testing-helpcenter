@@ -9,6 +9,8 @@ tags_list_from_data = TagsListFromData.new
 describe 'Help center tags' do
   before do
     @help_center_home_page, test = TestingHelpCentreOnlyoffice::HelpCenterHelper.new.open_help_center_main_page(config)
+    tags_page = @help_center_home_page.open_tags_page
+    @tags = tags_page.tags_list
   end
 
   after do |example|
