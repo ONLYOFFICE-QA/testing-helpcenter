@@ -1,12 +1,10 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'json'
 
 test_manager = TestingHelpCentreOnlyoffice::TestManager.new(suite_name: File.basename(__FILE__))
 test = nil
-@tags = nil
-tags_array = TagsNames.new
+tags_list_from_data = TagsListFromData.new
 
 describe 'Help center tags' do
   before do
@@ -20,7 +18,6 @@ describe 'Help center tags' do
 
   it 'Check tags from list' do
     tags_page = @help_center_home_page.open_tags_page
-    @tags = tags_page.tags_list
-    expect(@tags).to eq(tags_array.tags)
+    expect(tags_page.tags_list).to eq(tags_list_from_data.tags)
   end
 end
