@@ -5,7 +5,7 @@ require 'spec_helper'
 test_manager = TestingHelpCentreOnlyoffice::TestManager.new(suite_name: File.basename(__FILE__))
 test = nil
 @tags = nil
-tags_hash = TagsNames.new
+tags_array = TagsNames.new
 
 describe 'Help center tags' do
   before do
@@ -20,8 +20,6 @@ describe 'Help center tags' do
   it 'Check tags from list' do
     tags_page = @help_center_home_page.open_tags_page
     @tags = tags_page.tags_list
-    @tags.each do |tag|
-      expect(tag).to eq((tags_hash.tags[:text]))
-    end
+    expect(@tags).to eq(tags_array.tags)
   end
 end
