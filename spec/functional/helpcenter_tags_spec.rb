@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+require 'json'
 
 test_manager = TestingHelpCentreOnlyoffice::TestManager.new(suite_name: File.basename(__FILE__))
 test = nil
@@ -20,6 +21,7 @@ describe 'Help center tags' do
   it 'Check tags from list' do
     tags_page = @help_center_home_page.open_tags_page
     @tags = tags_page.tags_list
+    File.write('lib/testing-helpcenter/data/tags_list.json', @tags.to_json)
     expect(@tags).to eq(tags_array.tags)
   end
 end
