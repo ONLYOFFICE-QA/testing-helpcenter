@@ -10,6 +10,7 @@ class ArticlesWithTagPopup
     @pop_up_tags_xpath = "//div[@id = 'textHelpContent']//a"
   end
 
+  # @return [Array<String>] list of tags in pop up window
   def pop_up_tags_list
     @instance.webdriver.get_text_of_several_elements(@pop_up_tags_xpath)
   end
