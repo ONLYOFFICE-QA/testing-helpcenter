@@ -7,7 +7,7 @@ class ArticlesWithTagPopup
   def initialize(instance)
     super(instance.webdriver.driver)
     @instance = instance
-    @pop_up_tags_xpath = "//div[contains(@class, 'div_for_index')]//a[contains(@class, 'text-container-link')]//div[contains(@class, 'text-container-content')]//a"
+    @pop_up_tags_xpath = "//div[@id = 'textHelpContent']//a"
   end
 
   def pop_up_tags_list

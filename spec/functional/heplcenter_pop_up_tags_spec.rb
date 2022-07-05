@@ -19,7 +19,6 @@ describe 'Help center hidden tags' do
   it 'Check first hidden tag' do
     tags_page = @help_center_home_page.open_tags_page
     pop_up_tag_window = tags_page.tag_click('access level', tags_list_from_data.tags)
-    sleep(10)
     expect(pop_up_tag_window.pop_up_tags_list).not_to be_empty
   end
 end
