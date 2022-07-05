@@ -22,6 +22,5 @@ class HelpCenterTags
   def tag_click(tag_name, tags_array)
     tag_index = (tags_array.find_index(tag_name) + 1).to_s
     @instance.webdriver.get_element("//div[contains(@class, 'div_for_index')]//li[#{tag_index}]//a[contains(@class, 'text-container-link')]").click
-
   end
 end
