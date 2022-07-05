@@ -19,8 +19,8 @@ class HelpCenterTags
 
   def tag_click(tag_name)
     tags_list_from_data = TagsListFromData.new
-    tag_index = (tags_list_from_data.tags.find_index(tag_name) + 1).to_s
-    @instance.webdriver.click_on_locator("(#{@tags_xpath})[#{tag_index}]")
+    tag_index = tags_list_from_data.tags.find_index(tag_name)
+    @instance.webdriver.click_on_locator("(#{@tags_xpath})[#{tag_index + 1}]")
     ArticlesWithTagPopup.new(@instance)
   end
 end
