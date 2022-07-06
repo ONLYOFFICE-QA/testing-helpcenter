@@ -17,7 +17,7 @@ describe 'Help center hidden tags' do
   end
 
   tags_list_from_data.tags.each do |tag|
-    it 'Check pop up tag' do
+    it "Check pop up for tag: '#{tag}'" do
       tags_page = @help_center_home_page.open_tags_page
       pop_up_tag_window = tags_page.tag_click(tag)
       expect(pop_up_tag_window.pop_up_tags_list).not_to be_empty
