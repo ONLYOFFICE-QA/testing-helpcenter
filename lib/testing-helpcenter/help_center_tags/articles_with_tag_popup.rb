@@ -7,11 +7,24 @@ class ArticlesWithTagPopup
   def initialize(instance)
     super(instance.webdriver.driver)
     @instance = instance
-    @pop_up_tags_xpath = "//div[@id = 'textHelpContent']//a"
+    @base_xpath = "//div[@id = 'textHelpContainer']"
+    @pop_up_tags_xpath = "#{@base_xpath}//a"
+    @close_button_xpath = "#{@base_xpath}//a[contains(@class, 'closeContainerButton')]"
   end
 
   # @return [Array<String>] list of tags in pop up window
   def pop_up_tags_list
     @instance.webdriver.get_text_of_several_elements(@pop_up_tags_xpath)
+  end
+
+  def close
+    @instance.webdriver.click_on_locator(@close_button_xpath)
+    @instance.webdriver.wait_until do
+      !opened?
+    end
+  end
+
+  def opened?
+    @instance.webdriver.element_visible?(@base_xpath)
   end
 end
