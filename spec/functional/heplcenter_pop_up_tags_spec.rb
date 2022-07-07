@@ -26,7 +26,7 @@ describe 'Help center hidden tags' do
   it 'Closes pop up tag window' do
     tags_page = @help_center_home_page.open_tags_page
     pop_up_tag_window = tags_page.tag_click(tags_list_from_data.tags.first)
-    pop_up_tag_window.click_on_close_button
-    expect(tags_page.pop_up_open?).to be_truthy
+    pop_up_tag_window.close
+    expect(pop_up_tag_window).not_to be_opened
   end
 end
