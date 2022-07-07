@@ -10,7 +10,6 @@ class HelpCenterTags
     super(instance.webdriver.driver)
     @instance = instance
     @tags_xpath = "//div[contains(@class, 'div_for_index')]//a[contains(@class, 'text-container-link')]"
-    @pop_up_window_xpath = "//div[@id = 'textHelpContainer']"
   end
 
   # @return [Array<String>] list of tags in tags page

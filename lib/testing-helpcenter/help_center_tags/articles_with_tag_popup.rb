@@ -7,9 +7,9 @@ class ArticlesWithTagPopup
   def initialize(instance)
     super(instance.webdriver.driver)
     @instance = instance
-    @pop_up_tags_xpath = "//div[@id = 'textHelpContent']//a"
-    @close_button_xpath = "//div[@id = 'textHelpContainer']//a[contains(@class, 'closeContainerButton')]"
-    @pop_up_window_xpath = "//div[@id = 'textHelpContainer']"
+    @base_xpath = "//div[@id = 'textHelpContainer']"
+    @pop_up_tags_xpath = "#{@base_xpath}//a"
+    @close_button_xpath = "#{@base_xpath}//a[contains(@class, 'closeContainerButton')]"
   end
 
   # @return [Array<String>] list of tags in pop up window
@@ -25,6 +25,6 @@ class ArticlesWithTagPopup
   end
 
   def opened?
-    @instance.webdriver.element_visible?(@pop_up_window_xpath)
+    @instance.webdriver.element_visible?(@base_xpath)
   end
 end
