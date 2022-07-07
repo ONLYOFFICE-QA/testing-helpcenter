@@ -23,4 +23,8 @@ class HelpCenterTags
     @instance.webdriver.click_on_locator("(#{@tags_xpath})[#{tag_index + 1}]")
     ArticlesWithTagPopup.new(@instance)
   end
+
+  def pop_up_open?
+    @instance.webdriver.element_visible?("//div[contains(@class, 'blockUI blockOverlay')]")
+  end
 end

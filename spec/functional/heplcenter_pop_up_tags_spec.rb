@@ -23,4 +23,10 @@ describe 'Help center hidden tags' do
       expect(pop_up_tag_window.pop_up_tags_list).not_to be_empty
     end
   end
+  it 'Closes pop up tag window' do
+    tags_page = @help_center_home_page.open_tags_page
+    pop_up_tag_window = tags_page.tag_click(tags_list_from_data.tags.first)
+    pop_up_tag_window.click_on_close_button
+    expect(tags_page.pop_up_open?).to be_truthy
+  end
 end
