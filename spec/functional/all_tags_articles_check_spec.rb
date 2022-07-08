@@ -6,7 +6,7 @@ test_manager = TestingHelpCentreOnlyoffice::TestManager.new(suite_name: File.bas
 test = nil
 tags_list_from_data = TagsListFromData.new
 
-describe 'Help center hidden tags' do
+describe 'Help center pop up tags' do
   before do
     @help_center_home_page, test = TestingHelpCentreOnlyoffice::HelpCenterHelper.new.open_help_center_main_page(config)
   end
