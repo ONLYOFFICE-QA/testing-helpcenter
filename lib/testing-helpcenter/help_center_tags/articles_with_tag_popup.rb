@@ -10,6 +10,7 @@ class ArticlesWithTagPopup
     @base_xpath = "//div[@id = 'textHelpContainer']"
     @pop_up_tags_xpath = "#{@base_xpath}//a"
     @close_button_xpath = "#{@base_xpath}//a[contains(@class, 'closeContainerButton')]"
+    @browse_all_tags_xpath = "#{@base_xpath}//div[contains(@class, 'allkeywords')]//a"
   end
 
   # @return [Array<String>] list of tags in pop up window
