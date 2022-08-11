@@ -65,7 +65,7 @@ module TestingHelpCentreOnlyoffice
         CRM: 'navitem_userguides_crm',
         Projects: 'navitem_userguides_projects',
         Calendar: 'navitem_userguides_calendar',
-        'ONLYOFFICE Mobile Apps': 'navitem_mobile_app',
+        'ONLYOFFICE mobile apps': 'navitem_mobile_app',
         'Documents app for iOS': 'navitem_mobile_docs_ios',
         'Documents app for Android': 'navitem_mobile_docs_android',
         'Mobile web editors for iOS': 'navitem_mobile_web_docs_ios',
