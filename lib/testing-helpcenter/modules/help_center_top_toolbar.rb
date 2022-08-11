@@ -2,7 +2,6 @@
 
 require_relative '../help_center_home'
 require_relative '../external_products/api_main_page'
-require_relative '../main_page_links/help_center_contribution'
 require_relative '../main_page_links/top_toolbar_links_constructor'
 require_relative 'help_center_languages'
 
@@ -55,15 +54,16 @@ module TestingHelpCentreOnlyoffice
       click_menu_link_by_xpath(link_xpath, link_title)
     end
 
+    def click_toolbar_contribution_link(link_title)
+      @instance.webdriver.move_to_element_by_locator(contribution_element.selector[:xpath])
+      link_xpath = toolbar_section_xpath(ToolbarInfo.contribution_links[link_title])
+      click_menu_link_by_xpath(link_xpath, link_title)
+    end
+
     def click_menu_link_by_xpath(link_xpath, link_title)
       @instance.webdriver.wait_until { @instance.webdriver.element_present?(link_xpath) }
       @instance.webdriver.driver.find_element(:xpath, link_xpath).click
       TopToolbarLinksConstructor.new(@instance, link_title)
-    end
-
-    def click_toolbar_contribution
-      contribution_element.click
-      HelpCenterContribution.new(@instance)
     end
 
     def click_toolbar_development

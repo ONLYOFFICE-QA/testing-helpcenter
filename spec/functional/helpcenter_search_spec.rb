@@ -20,7 +20,7 @@ describe 'Help center search' do
   end
 
   describe 'Side menu search' do
-    let(:contribution_page) { @help_center_home_page.click_toolbar_contribution }
+    let(:contribution_page) { @help_center_home_page.click_toolbar_contribution_link(:Translating) }
 
     it_behaves_like 'help_center_search', 'Side Menu' do
       let(:current_page) { contribution_page }

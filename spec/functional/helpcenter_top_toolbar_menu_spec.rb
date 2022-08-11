@@ -49,9 +49,13 @@ describe 'Help center top toolbar menu' do
     end
   end
 
-  it 'Open `Contribution` page' do
-    contribution_page = @help_center_home_page.click_toolbar_contribution
-    expect(contribution_page).to be_participating_in_translation_block_present
+  describe 'Contribution' do
+    TestingHelpCentreOnlyoffice::ToolbarInfo.contribution_links.each_key do |title|
+      it "[Contribution] Open #{title} page" do
+        contribution = @help_center_home_page.click_toolbar_contribution_link(title)
+        expect(contribution).to be_title_element_present
+      end
+    end
   end
 
   it 'Open `Development` page' do
