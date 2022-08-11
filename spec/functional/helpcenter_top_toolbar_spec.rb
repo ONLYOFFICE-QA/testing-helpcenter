@@ -32,7 +32,7 @@ describe 'Help center top toolbar check' do
   end
 
   it 'Check `Logo` button leads to main page' do
-    contribution_page = @help_center_home_page.click_toolbar_contribution
+    contribution_page = @help_center_home_page.click_toolbar_contribution_link(:Translating)
     home_page = contribution_page.click_logo
     expect(home_page).to be_a TestingHelpCentreOnlyoffice::HelpCenterHome
   end

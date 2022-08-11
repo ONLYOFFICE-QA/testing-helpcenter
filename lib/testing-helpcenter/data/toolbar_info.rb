@@ -73,5 +73,15 @@ module TestingHelpCentreOnlyoffice
         'Projects for iOS': 'navitem_mob_proj'
       }
     end
+
+    # @return [Hash] list of contribution links
+    def self.contribution_links
+      {
+        Translating: 'navitem_translate',
+        Testing: 'navitem_test',
+        'Writing documentation': 'navitem_write',
+        'Reporting issues': 'navitem_report'
+      }
+    end
   end
 end
