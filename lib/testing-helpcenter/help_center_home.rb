@@ -59,7 +59,7 @@ module TestingHelpCentreOnlyoffice
     end
 
     def open_tags_page
-      @instance.webdriver.open("#{@instance.webdriver.get_url}/tags.aspx")
+      @instance.webdriver.open("#{@instance.webdriver.current_url}/tags.aspx")
       HelpCenterTags.new(@instance)
     end
   end
