@@ -134,7 +134,7 @@ DEPENDENCIES
   httparty
   onlyoffice_tcm_helper
   onlyoffice_testrail_wrapper
-  onlyoffice_webdriver_wrapper
+  onlyoffice_webdriver_wrapper (>= 1.10.0)
   overcommit
   page-object
   palladium

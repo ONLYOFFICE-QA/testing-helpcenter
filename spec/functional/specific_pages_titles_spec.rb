@@ -18,9 +18,9 @@ describe 'Help center footer links' do
 
   page_hash.hash.each do |hash|
     it "Check page title of '#{hash[:url]}'" do
-      page_to_open = "#{test.webdriver.get_url}#{hash[:url]}"
+      page_to_open = "#{test.webdriver.current_url}#{hash[:url]}"
       test.webdriver.open(page_to_open)
-      expect(test.webdriver.get_title_of_current_tab).to eq((hash[:title]))
+      expect(test.webdriver.title_of_current_tab).to eq((hash[:title]))
     end
   end
 end
