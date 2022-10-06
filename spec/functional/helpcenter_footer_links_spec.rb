@@ -14,8 +14,6 @@ describe 'Help center footer links' do
   TestingHelpCentreOnlyoffice::HelpCenterData.footer_links.each do |section_title, titles|
     titles.each do |title|
       it "`#{title}` link of `#{section_title}` footer section works" do
-        pending('Link `https://www.instagram.com/the_onlyoffice/` answered with 405') if title == 'Follow us on Instagram'
-        pending('Link to Medium blog answered with 403') if title == 'Follow us on Medium'
         expect(help_center_home_page).to be_help_center_footer_link_alive(section_title, title)
       end
     end
