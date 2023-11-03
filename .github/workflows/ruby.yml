@@ -1,7 +1,7 @@
 name: Ruby
 on: [push]
 jobs:
-  run_spec:
+  run_sanity:
     runs-on: ubuntu-latest
     strategy:
       matrix:
