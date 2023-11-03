@@ -1,7 +1,7 @@
 name: Ruby
 on: [push]
 jobs:
-  build:
+  run_spec:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -16,8 +16,6 @@ jobs:
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
-      - name: Check source files using `rubocop`
-        run: rubocop
       - name: Update to current stable google-chrome
         run: |
           echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
