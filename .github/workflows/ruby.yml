@@ -17,7 +17,7 @@ jobs:
         run: rubocop
       - name: Update to current stable google-chrome
         run: |
-          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+          echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
           sudo apt-get -y update
           sudo apt-get -y install google-chrome-stable
       - name: Run single browser spec to check sanity
