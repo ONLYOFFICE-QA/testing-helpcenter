@@ -38,7 +38,9 @@ module TestingHelpCentreOnlyoffice
     end
 
     def wait_to_load
-      @instance.webdriver.wait_until { main_page_search_element.present? }
+      @instance.webdriver.wait_until(wait_js: false) do
+        main_page_search_element.present?
+      end
     end
 
     # Perform search by string
