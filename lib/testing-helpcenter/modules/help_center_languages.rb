@@ -10,7 +10,7 @@ module TestingHelpCentreOnlyoffice
     elements(:language_select, xpath: "//li[contains(@class, 'option')]")
 
     def current_page_language
-      @instance.webdriver.wait_until(wait_js: false) do
+      @instance.webdriver.wait_until(wait_js: config.wait_for_js_load) do
         page_language_element.present?
       end
       page_language_element.attribute('class').split.at(1)
@@ -23,12 +23,12 @@ module TestingHelpCentreOnlyoffice
       open_list_languages_page unless language_select_elements[1].present?
       xpath_of_lang = "//li[@class='option #{lang_to_set}']/a"
       @instance.webdriver.click_on_locator xpath_of_lang
-      @instance.webdriver.wait_until(wait_js: false) { lang_to_set == current_page_language }
+      @instance.webdriver.wait_until(wait_js: config.wait_for_js_load) { lang_to_set == current_page_language }
     end
 
     def open_list_languages_page
       page_language_element.click
-      @instance.webdriver.wait_until(wait_js: false) do
+      @instance.webdriver.wait_until(wait_js: config.wait_for_js_load) do
         @instance.webdriver.element_present?(language_select_elements[1])
       end
     end

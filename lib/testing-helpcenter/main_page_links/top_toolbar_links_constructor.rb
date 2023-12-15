@@ -20,7 +20,7 @@ module TestingHelpCentreOnlyoffice
     end
 
     def wait_to_load
-      @instance.webdriver.wait_until(wait_js: false) { title_element_present? }
+      @instance.webdriver.wait_until(wait_js: config.wait_for_js_load) { title_element_present? }
     end
 
     def title_element_present?

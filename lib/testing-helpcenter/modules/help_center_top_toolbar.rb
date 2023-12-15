@@ -61,7 +61,7 @@ module TestingHelpCentreOnlyoffice
     end
 
     def click_menu_link_by_xpath(link_xpath, link_title)
-      @instance.webdriver.wait_until(wait_js: false) { @instance.webdriver.element_present?(link_xpath) }
+      @instance.webdriver.wait_until(wait_js: config.wait_for_js_load) { @instance.webdriver.element_present?(link_xpath) }
       @instance.webdriver.driver.find_element(:xpath, link_xpath).click
       TopToolbarLinksConstructor.new(@instance, link_title)
     end

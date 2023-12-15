@@ -19,7 +19,7 @@ module TestingHelpCentreOnlyoffice
     end
 
     def wait_to_load
-      @instance.webdriver.wait_until(wait_js: false) do
+      @instance.webdriver.wait_until(wait_js: config.wait_for_js_load) do
         no_result_found_element.present? || search_result_entry_element.present?
       end
     end
