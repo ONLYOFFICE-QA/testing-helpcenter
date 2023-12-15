@@ -20,7 +20,7 @@ module TestingHelpCentreOnlyoffice
       return if faq_answer_link_visible?(title, faq_answer_link_title)
 
       @instance.webdriver.driver.find_element(:xpath, faq_question_xpath(title)).click
-      @instance.webdriver.wait_until { faq_answer_link_visible?(title, faq_answer_link_title) }
+      @instance.webdriver.wait_until(wait_js: config.wait_for_js_load) { faq_answer_link_visible?(title, faq_answer_link_title) }
     end
 
     def faq_question_xpath(title)

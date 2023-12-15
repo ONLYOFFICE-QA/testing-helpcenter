@@ -30,6 +30,14 @@ module TestingHelpCentreOnlyoffice
       'unknown'
     end
 
+    # @todo Change to true when HelpCenter will be fixed
+    # Currently HelpCenter pages take too long to be fully loaded,
+    # it is suspected that the reason is jQuery requests, loading time of which exceeds PageObject.default_page_wait
+    # This is temporary fix, which should be changed to true when the issues will be handled
+    def wait_for_js_load
+      false
+    end
+
     private
 
     # @return [String] server on which test are performed
