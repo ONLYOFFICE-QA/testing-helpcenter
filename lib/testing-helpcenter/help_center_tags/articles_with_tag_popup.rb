@@ -20,7 +20,7 @@ class ArticlesWithTagPopup
 
   def close
     @instance.webdriver.click_on_locator(@close_button_xpath)
-    @instance.webdriver.wait_until do
+    @instance.webdriver.wait_until(wait_js: false) do
       !opened?
     end
   end
@@ -31,7 +31,7 @@ class ArticlesWithTagPopup
 
   def browse_all_tags_click
     @instance.webdriver.click_on_locator(@browse_all_tags_xpath)
-    @instance.webdriver.wait_until do
+    @instance.webdriver.wait_until(wait_js: false) do
       !opened?
     end
   end

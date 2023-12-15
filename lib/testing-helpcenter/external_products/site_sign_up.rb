@@ -10,7 +10,7 @@ module TestingHelpCentreOnlyoffice
 
     def initialize(instance)
       super(instance.webdriver.driver)
-      instance.webdriver.wait_until do
+      instance.webdriver.wait_until(wait_js: false) do
         first_name_element.present?
       end
     end

@@ -10,7 +10,7 @@ module TestingHelpCentreOnlyoffice
 
     def initialize(instance)
       super(instance.webdriver.driver)
-      instance.webdriver.wait_until { main_page_title_element.present? }
+      instance.webdriver.wait_until(wait_js: false) { main_page_title_element.present? }
     end
 
     def api_opened?
