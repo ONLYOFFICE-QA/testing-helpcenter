@@ -23,4 +23,4 @@ jobs:
           sudo apt-get -y install google-chrome-stable
       - name: Run single browser spec to check sanity
         run: |
-          rspec spec/functional/helpcenter_main_page_links_spec.rb
+          bundle exec rspec spec/functional/helpcenter_main_page_links_spec.rb
