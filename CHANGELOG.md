@@ -7,6 +7,7 @@
 * Add `yamllint` check in CI
 * Add `ruby-3.3` to CI
 * Add `dependabot check` for `GitHub Actions`
+* Add `ruby-3.4` to CI
 
 ### Changes
 
