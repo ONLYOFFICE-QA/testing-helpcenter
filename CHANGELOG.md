@@ -14,3 +14,4 @@
 * Check `dependabot` at 8:00 Moscow time daily
 * Fix `rubocop-1.28.1` code issues
 * Remove `ruby-3.1` from CI
+* Run CI on production helpcenter, not a dev one
