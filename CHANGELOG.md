@@ -15,3 +15,8 @@
 * Fix `rubocop-1.28.1` code issues
 * Remove `ruby-3.1` from CI
 * Run CI on production helpcenter, not a dev one
+* Fix `rubocop-1.72.0` cop `Style/RedundantParentheses`
+
+### Fixes
+
+* Run `rubocop` in CI through `bundle exec`

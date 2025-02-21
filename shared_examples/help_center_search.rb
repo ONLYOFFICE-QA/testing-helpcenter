@@ -11,6 +11,6 @@ shared_examples_for 'help_center_search' do |type|
     search_string = 'TEST'
     result_page = current_page.search(search_string)
     expect(result_page.search_result_count).to be_positive
-    expect(result_page.search_results.first.snippet_text).to be_include(search_string)
+    expect(result_page.search_results.first.snippet_text).to include(search_string)
   end
 end
