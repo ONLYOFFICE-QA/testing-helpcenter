@@ -62,7 +62,7 @@ GEM
       onlyoffice_bugzilla_helper (~> 0.1)
       onlyoffice_file_helper (< 3)
       onlyoffice_logger_helper (~> 1)
-    onlyoffice_webdriver_wrapper (1.35.0)
+    onlyoffice_webdriver_wrapper (1.37.0)
       headless (~> 2)
       onlyoffice_file_helper (< 3)
       onlyoffice_logger_helper (~> 1)
@@ -168,4 +168,4 @@ DEPENDENCIES
   wrata_api
 
 BUNDLED WITH
-   2.4.21
+   2.5.22
